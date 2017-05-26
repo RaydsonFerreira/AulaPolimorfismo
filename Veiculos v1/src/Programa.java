@@ -18,6 +18,8 @@ public class Programa {
     public static void main(String[] args) {
         simulador = new Simulador();
         
+        System.out.println("Simulador de Veiculos");
+        
         int opcaoMenu;
         do {
             opcaoMenu = exibirMenu();
