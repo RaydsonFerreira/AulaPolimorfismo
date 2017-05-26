@@ -39,7 +39,8 @@ public class Onibus extends Veiculo {
 	 * 
 	 * @return A descricao do onibus (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
-    public String getDescricaoOnibus() {
+    @Override
+    public String getDescricaoVeiculo() {
         return getDescricaoVeiculo() + "\t" + capacidadePassageiros;
     }
 }
