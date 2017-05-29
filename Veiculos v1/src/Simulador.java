@@ -25,10 +25,11 @@ public class Simulador
      * @param modelo Modelo do carro a ser criado.
      * @param marca Marca do carro a ser criado.
      * @param placa Placa do carro a ser criado.
+     * @param imposto Imposto do carro a ser pago.
      * @param ehFlex Indica se o carro eh flex ou nao (em relacao ao combustivel)
      */
-    public void adicionarCarro(String modelo, String marca, String placa, boolean ehFlex) {
-        Carro carro = new Carro(modelo, marca, placa, ehFlex);
+    public void adicionarCarro(String modelo, String marca, String placa, double imposto, boolean ehFlex) {
+        Carro carro = new Carro(modelo, marca, placa, imposto, ehFlex);
         
         veiculos.add(carro);
     }
@@ -39,10 +40,11 @@ public class Simulador
      * @param modelo Modelo do caminhao a ser criado.
      * @param marca Marca do caminhao a ser criado.
      * @param placa Placa do caminhao a ser criado.
+     * @param imposto Imposto do caminhão a ser pago.
      * @param capacidadeCarga Capacidade de carga do caminhao (em toneladas).
      */
-    public void adicionarCaminhao(String modelo, String marca, String placa, double capacidadeCarga) {
-        Caminhao caminhao = new Caminhao(modelo, marca, placa, capacidadeCarga);
+    public void adicionarCaminhao(String modelo, String marca, String placa, double imposto, double capacidadeCarga) {
+        Caminhao caminhao = new Caminhao(modelo, marca, placa, imposto, capacidadeCarga);
         
         veiculos.add(caminhao);
     }
@@ -53,10 +55,11 @@ public class Simulador
      * @param modelo Modelo do onibus a ser criado.
      * @param marca Marca do onibus a ser criado.
      * @param placa Placa do onibus a ser criado.
+     * @param imposto Imposto do onibus a ser pago.
      * @param capacidadePassageiros Quantidade de passageiros que o onibus pode carregar.
      */
-    public void adicionarOnibus(String modelo, String marca, String placa, int capacidadePassageiros) {
-        Onibus onibus = new Onibus(modelo, marca, placa, capacidadePassageiros);
+    public void adicionarOnibus(String modelo, String marca, String placa, double imposto, int capacidadePassageiros) {
+        Onibus onibus = new Onibus(modelo, marca, placa, imposto, capacidadePassageiros);
         
         veiculos.add(onibus);
     }

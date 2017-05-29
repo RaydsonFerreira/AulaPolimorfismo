@@ -12,7 +12,7 @@ public class Veiculo {
     private String marca;
     private String placa;
     private int velocidadeAtual;
-    
+    private double imposto;
     /*
      * Constroi o objeto a partir do modelo, marca e placa passados.
      * A velocidade inicial do veiculo sera zero km/h.
@@ -21,11 +21,12 @@ public class Veiculo {
      * @param marca Marca do veiculo a ser criado.
      * @param placa Placa do veiculo a ser criado.
      */
-    public Veiculo(String modelo, String marca, String placa) {
+    public Veiculo(String modelo, String marca, String placa, double imposto) {
         this.modelo = modelo;
         this.marca = marca;
         this.placa = placa;
         velocidadeAtual = 0;
+        this.imposto = imposto;
     }
     
     /**

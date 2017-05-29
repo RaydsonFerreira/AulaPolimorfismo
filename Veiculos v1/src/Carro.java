@@ -17,10 +17,11 @@ public class Carro extends Veiculo {
      * @param modelo Modelo do carro a ser criado.
      * @param marca Marca do carro a ser criado.
      * @param placa Placa do carro a ser criado.
-     * @param ehFlex Indica se o carro eh flex ou nao (em relacao ao combustivel)
+     * @param imposto Valor do imposto anual do veiculo.
+     * @param ehFlex Indica se o carro eh flex ou nao. (em relacao ao combustivel)
      */
-    public Carro(String modelo, String marca, String placa, boolean ehFlex) {
-        super(modelo, marca, placa);
+    public Carro(String modelo, String marca, String placa, double imposto, boolean ehFlex) {
+        super(modelo, marca, placa, imposto);
         this.ehFlex = ehFlex;
     }
 

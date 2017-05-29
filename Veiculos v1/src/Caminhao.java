@@ -20,8 +20,8 @@ public class Caminhao extends Veiculo
      * @param placa Placa do caminhao a ser criado.
      * @param capacidadeCarga Capacidade de carga do caminhao (em toneladas).
      */
-    public Caminhao(String modelo, String marca, String placa, double capacidadeCarga) {
-        super(modelo, marca, placa);
+    public Caminhao(String modelo, String marca, String placa, double imposto, double capacidadeCarga) {
+        super(modelo, marca, placa, imposto);
         this.capacidadeCarga = capacidadeCarga;
     }
 

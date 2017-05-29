@@ -65,6 +65,7 @@ public class Programa {
      */
     private static void adicionarVeiculo() {        
         String modelo, marca, placa;
+        double imposto = 100.0;
         int tipo;
         boolean adicionado = false;
         Scanner entrada = new Scanner(System.in);
@@ -83,20 +84,25 @@ public class Programa {
             case 1: // carro
                 System.out.print("Digite se eh flex (1-sim, 2-nao): ");
                 int flex = entrada.nextInt();
-                boolean ehFlex = (flex == 1);				
-                simulador.adicionarCarro(modelo, marca, placa, ehFlex);
+                boolean ehFlex = (flex == 1);
+                if(ehFlex) imposto -= imposto * 0.1;
+                else imposto += imposto * 0.05;
+                simulador.adicionarCarro(modelo, marca, placa, imposto, ehFlex);
                 adicionado = true;
                 break;
             case 2: // caminhao
                 System.out.print("Digite a capacidade de carga (ton): ");
                 double capacidadeCarga = entrada.nextDouble();
-                simulador.adicionarCaminhao(modelo, marca, placa, capacidadeCarga);
+                if(capacidadeCarga <= 10) imposto -= imposto * 0.1;
+                else if(capacidadeCarga >= 30) imposto += imposto + 2.0;
+                simulador.adicionarCaminhao(modelo, marca, placa, imposto, capacidadeCarga);
                 adicionado = true;
                 break;
             case 3: // onibus
                 System.out.print("Digite a capacidade de passageiros: ");
                 int capacidadePas = entrada.nextInt();
-                simulador.adicionarOnibus(modelo, marca, placa, capacidadePas);
+                if(capacidadePas <= 30) imposto = 0.0;
+                simulador.adicionarOnibus(modelo, marca, placa, imposto, capacidadePas);
                 adicionado = true;
                 break;
             default:

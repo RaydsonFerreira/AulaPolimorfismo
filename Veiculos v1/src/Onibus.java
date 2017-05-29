@@ -19,8 +19,8 @@ public class Onibus extends Veiculo {
      * @param placa Placa do onibus a ser criado.
      * @param capacidadePassageiros Quantidade de passageiros que o onibus pode carregar.
      */
-    public Onibus(String modelo, String marca, String placa, int capacidadePassageiros) {
-        super(modelo, marca, placa);
+    public Onibus(String modelo, String marca, String placa, double imposto, int capacidadePassageiros) {
+        super(modelo, marca, placa, imposto);
         this.capacidadePassageiros = capacidadePassageiros;
     }
 
