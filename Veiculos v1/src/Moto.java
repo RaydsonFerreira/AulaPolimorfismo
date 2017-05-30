@@ -40,9 +40,9 @@ public class Moto extends Veiculo {
 	 * 
 	 * @return A descricao da moto (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
+    
     @Override
     public String getDescricaoVeiculo() {
         return super.getDescricaoVeiculo() + "\t" + cilindradas;
     }
-    
 }

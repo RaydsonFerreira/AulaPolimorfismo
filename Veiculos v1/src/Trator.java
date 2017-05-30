@@ -25,6 +25,7 @@ public class Trator extends Veiculo {
 	 * 
 	 * @return A descricao do trator (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
+    
     @Override
     public String getDescricaoVeiculo() {
         String descricao = super.getDescricaoVeiculo();
