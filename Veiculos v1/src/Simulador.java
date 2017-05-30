@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * Classe que sera responsavel pela Simulacao do Transito.
- * Por enquanto, ela apenas trata as colecoes de veiculos (carros, caminhoes e onibus).
+ * Por enquanto, ela apenas trata as colecoes de veiculos (carros, caminhoes, onibus, trator e moto).
  * 
  * @author Julio Cesar Alves
  * @version 2016-06-19
@@ -62,6 +62,35 @@ public class Simulador
         Onibus onibus = new Onibus(modelo, marca, placa, imposto, capacidadePassageiros);
         
         veiculos.add(onibus);
+    }
+    
+    /**
+     * Adiciona um trator ao simulador
+     * 
+     * @param modelo Modelo do trator a ser criado.
+     * @param marca Marca do trator a ser criado.
+     * @param placa Placa do trator a ser criado.
+     * @param imposto Imposto do trator a ser pago.
+     */
+    public void adicionarTrator(String modelo, String marca, String placa, double imposto) {
+        Trator trator = new Trator(modelo, marca, placa, imposto);
+        
+        veiculos.add(trator);
+    }
+    
+    /**
+     * Adiciona uma moto ao simulador
+     * 
+     * @param modelo Modelo da moto a ser criado.
+     * @param marca Marca da moto a ser criado.
+     * @param placa Placa da moto a ser criado.
+     * @param imposto Imposto da moto a ser pago.
+     * @param cilindradas Qunatidade de cilindradas da moto a ser criada.
+     */
+    public void adicionarMoto(String modelo, String marca, String placa, double imposto, int cilindradas) {
+        Moto moto = new Moto(modelo, marca, placa, imposto, cilindradas);
+        
+        veiculos.add(moto);
     }
     
     /**

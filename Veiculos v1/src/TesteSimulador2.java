@@ -1,12 +1,12 @@
 /**
- * Classe que sera responsavel por fazer testes da classe Simulador.
+ * Outra Classe que sera responsavel por fazer testes da classe Simulador.
  * Ela adiciona de maneira automatizada os veiculos a serem criados
  * e os imprime da maneira de frota.
  * 
  * @author raydson
  * @version 2017-05-30
  */
-public class TesteSimulador {
+public class TesteSimulador2 {
     private static Simulador simulador;
     
     public static void addCarro(String modelo, String marca, String placa, double imposto, boolean ehFlex, int velocidade){
@@ -37,14 +37,12 @@ public class TesteSimulador {
     public static void main(String[] args){
         simulador = new Simulador();
         boolean ehFlex = true;
-        addCarro("F50", "Ferrari", "GZA1234", 90.0, ehFlex, 240);
-        ehFlex = false;
-        addCarro("Fusca", "VW", "GZA1234", 105.0, ehFlex, 50);        
-        addCaminhao("Atego", "Mercedes", "GZB1111", 100.0, 10, 60);
-        addCaminhao("Brutus", "Sacania", "GZB2222", 300.0, 35, 60);
-        addOnibus("Apache", "Caio", "SIM9988", 0.0, 25, 40);
-        addTrator("4230", "Agrale", "GZA9999", 0.0, 10);
-        
+        addMoto("CG", "Honda", "BOI1234", 155.0, 125, 80);
+        addCarro("Corolla", "Toyota", "EVA5463", 95.0, ehFlex, 90);
+        addOnibus("Apache", "Caio", "SIM9988", 100.0, 40, 40);
+        addMoto("Ninja", "Kawasaki", "BOA5151", 175.0, 300, 110);
+                
         System.out.println(simulador.getDescricaoFrota());
     }
+    
 }

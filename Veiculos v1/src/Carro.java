@@ -44,10 +44,10 @@ public class Carro extends Veiculo {
     public String getDescricaoVeiculo() {
         String descricao = super.getDescricaoVeiculo();
         if (ehFlex) {
-            descricao = descricao + "\tFlex";
+            descricao = descricao + "\t ehFlex";
         }
         else {
-            descricao = descricao + "\tComum";
+            descricao = descricao + "\t Comum";
         }
         return descricao;
     }

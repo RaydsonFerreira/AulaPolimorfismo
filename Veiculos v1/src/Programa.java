@@ -77,7 +77,7 @@ public class Programa {
         System.out.print("Digite a placa: ");
         placa = entrada.next();
         
-        System.out.print("Qual o tipo de veiculo (1-carro, 2-caminhao, 3-onibus)? ");
+        System.out.print("Qual o tipo de veiculo (1-carro, 2-caminhao, 3-onibus, 4-trator, 5-moto)? ");
         tipo = entrada.nextInt();
         
         switch(tipo) {
@@ -103,6 +103,20 @@ public class Programa {
                 int capacidadePas = entrada.nextInt();
                 if(capacidadePas <= 30) imposto = 0.0;
                 simulador.adicionarOnibus(modelo, marca, placa, imposto, capacidadePas);
+                adicionado = true;
+                break;
+            case 4: // trator
+                imposto = 0.0;
+                simulador.adicionarTrator(modelo, marca, placa, imposto);
+                adicionado = true;
+                break;
+            case 5:
+                System.out.print("Digite a quantidade de cilindradas: ");
+                int cilindradas = entrada.nextInt();
+                if(cilindradas == 125) imposto += (imposto * 0.05) + 50;
+                else if(cilindradas == 250) imposto += (imposto * 0.15) + 50;
+                else imposto += (imposto * 0.25) + 50;
+                simulador.adicionarMoto(modelo, marca, placa, imposto, cilindradas);
                 adicionado = true;
                 break;
             default:
