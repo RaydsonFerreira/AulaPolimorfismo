@@ -1,6 +1,6 @@
 /**
  * Classe que representa um Onibus.
- * Onibus herda da classe Veiculo (e, portanto, tem modelo, marca, placa e velocidade atual)
+ * Onibus herda da classe Veiculo (e, portanto, tem modelo, marca, placa, imposto e velocidade atual)
  * E acrescenta a quantidade passageiros que o onibus pode levar.
  * 
  * @author Julio Cesar Alves 
@@ -17,6 +17,7 @@ public class Onibus extends Veiculo {
      * @param modelo Modelo do onibus a ser criado.
      * @param marca Marca do onibus a ser criado.
      * @param placa Placa do onibus a ser criado.
+     * @param imposto Imposto do onibus a ser criado
      * @param capacidadePassageiros Quantidade de passageiros que o onibus pode carregar.
      */
     public Onibus(String modelo, String marca, String placa, double imposto, int capacidadePassageiros) {
@@ -35,12 +36,12 @@ public class Onibus extends Veiculo {
     
     /**
      * Retorna a descricao do onibus no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h     Capacidade
+     *  Placa   Modelo  Marca  Imposto  Velocidade km/h     Capacidade
 	 * 
 	 * @return A descricao do onibus (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
     @Override
     public String getDescricaoVeiculo() {
-        return getDescricaoVeiculo() + "\t" + capacidadePassageiros;
+        return super.getDescricaoVeiculo() + "\t" + capacidadePassageiros;
     }
 }

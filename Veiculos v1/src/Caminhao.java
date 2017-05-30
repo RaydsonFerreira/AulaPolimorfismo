@@ -1,6 +1,6 @@
 /**
  * Classe que representa um Caminhao.
- * Caminhao herda da classe Veiculo (e, portanto, tem modelo, marca, placa e velocidade atual)
+ * Caminhao herda da classe Veiculo (e, portanto, tem modelo, marca, placa, imposto e velocidade atual)
  * E acrescenta a capacidade de carga do caminhao em toneladas.
  * 
  * @author Julio Cesar Alves 
@@ -18,6 +18,7 @@ public class Caminhao extends Veiculo
      * @param modelo Modelo do caminhao a ser criado.
      * @param marca Marca do caminhao a ser criado.
      * @param placa Placa do caminhao a ser criado.
+     * @param imposto  Imposto do caminhao a ser criado.
      * @param capacidadeCarga Capacidade de carga do caminhao (em toneladas).
      */
     public Caminhao(String modelo, String marca, String placa, double imposto, double capacidadeCarga) {
@@ -36,12 +37,12 @@ public class Caminhao extends Veiculo
     
     /**
      * Retorna a descricao do caminhao no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h     Capacidade
+     *  Placa   Modelo  Marca  Imposto  Velocidade km/h     Capacidade
 	 * 
 	 * @return A descricao do caminhao (a descricao do veiculo mais seus campos separados por tabulacoes)
      */
     @Override
     public String getDescricaoVeiculo() {
-        return getDescricaoVeiculo() + "\t" + capacidadeCarga;
+        return super.getDescricaoVeiculo() + "\t" + capacidadeCarga;
     }
 }

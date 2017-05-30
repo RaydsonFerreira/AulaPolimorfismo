@@ -2,7 +2,7 @@
  * Classe que define um veiculo. A ideia eh que seja usada como superclasse para
  * os demais tipos de veiculos.
  * 
- * Um veiculo tem modelo, marca, placa e velocidade atual.
+ * Um veiculo tem modelo, marca, placa, imposto e velocidade atual.
  * 
  * @author Julio Cesar Alves
  * @version 2016-0-19
@@ -13,13 +13,15 @@ public class Veiculo {
     private String placa;
     private int velocidadeAtual;
     private double imposto;
-    /*
+    
+    /**
      * Constroi o objeto a partir do modelo, marca e placa passados.
      * A velocidade inicial do veiculo sera zero km/h.
      * 
      * @param modelo Modelo do veículo a ser criado.
      * @param marca Marca do veiculo a ser criado.
      * @param placa Placa do veiculo a ser criado.
+     * @param imposto Imposto do veiculo a ser criado.
      */
     public Veiculo(String modelo, String marca, String placa, double imposto) {
         this.modelo = modelo;
@@ -66,6 +68,15 @@ public class Veiculo {
     }
     
     /**
+     * Retorna o imposto a ser cobrado do veiculo
+        *
+        * @return O imposto do veiculo
+     */
+    public double getImposto(){
+        return imposto;
+    }
+    
+    /**
      * Altera a velocidade atual do veiculo.
      * So altera a velocidade se for passado valor maior ou igual a zero.
      * 
@@ -84,11 +95,11 @@ public class Veiculo {
     
     /**
      * Retorna a descricao do veiculo no formato:
-     *  Placa   Modelo  Marca   Velocidade km/h
+     *  Placa   Modelo  Marca  Imposto  Velocidade km/h
 	 * 
 	 * @return A descricao do veiculo (seus campos separados por tabulacoes)
      */
     public String getDescricaoVeiculo() {
-        return placa + "\t" + modelo + "\t" + marca + "\t" + velocidadeAtual + " Km/h";
+        return placa + "\t" + modelo + "\t" + marca + "\tR$ " + imposto + "\t" + velocidadeAtual + " Km/h";
     }
 }
