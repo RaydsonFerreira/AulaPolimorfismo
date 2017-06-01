@@ -1,0 +1,36 @@
+a) Quais são as variáveis polimórficas utilizadas.
+
+Resposta: Na Classe 'Simulador' possui uma variável do tipo 'Veiculo', essa variável é um 'ArrayList', o qual
+guarda objetos descendentes da Classe 'Veiculo', os quais são 'Carro', 'Caminhão', 'Ônibus', 'Trator' e 'Moto'.
+Dentro da mesma Classe, 'Simulador', dois metodos, 'getDescricaoFrota' e 'buscarVeiculo', usam um 'foreach'
+com uma variavel 'v' do tipo 'Veiculo', o qual percorre a lista acima citada, assim realizando a
+operação no veiculo atribuido a posicao da lista.
+
+---------------------------------------------------------------------------------------------------------------
+b) Identifique algum ponto no código onde está sendo usado o princípio da substituição.
+
+Resposta: É usado substituição na Classe 'Simulador' nos métodos 'getDescricaoFrota' e 'buscarVeiculo', dentro do
+'foreach' possui uma variavel do tipo 'Veiculo' a qual recebe diferentes tipos de veículos, sendo eles pra
+comparação ou exibição dos dados na tela.
+
+---------------------------------------------------------------------------------------------------------------
+c) Identifique algum ponto no código onde uma variável tem tipo estático e tipo dinâmico diferentes
+(indique qual é a variável e quais são os tipos).
+
+Resposta: A variável 'veiculos' na classe 'Simulador', tem tipo estático 'Veiculo', mas tipo dinâmico 'Carro',
+'Caminhao', 'Trator', 'Onibus' e 'Moto'.
+ 
+---------------------------------------------------------------------------------------------------------------
+d) Identifique algum ponto no código onde ocorre o dynamic dispatch. Indique a variável, a chamada do
+método e as classes que têm os métodos que estão sendo chamados dependendo de cada situação.
+
+Resposta: Na Classe 'Simulador' tem uma função 'BuscarVeiculo' com um 'foreach' de uma lista de veiculos com
+variavel 'v', no foreach é usado pra cada tipo dinâmico de v (depende do retorno, Carro, Caminhão, Ônibus,
+Trator ou Moto) é chamado o getModelo  para comparação.
+
+---------------------------------------------------------------------------------------------------------------
+e) Identifique onde está sendo usado polimorfismo de método e explique como ele funciona.
+
+Resposta: Na Classe 'alterarVelocidade', ela tem uma variavel do tipo 'Veiculo', qua através do metódo
+buscarVeiculo, recebe um 'Carro', 'Caminhão', 'Ônibus', 'Trator' ou 'Moto', como retorno da classe que é
+declarada como 'Veiculo'.
