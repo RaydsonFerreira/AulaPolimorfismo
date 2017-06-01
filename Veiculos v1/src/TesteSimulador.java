@@ -36,10 +36,8 @@ public class TesteSimulador {
     
     public static void main(String[] args){
         simulador = new Simulador();
-        boolean ehFlex = true;
-        addCarro("F50", "Ferrari", "GZA1234", 90.0, ehFlex, 240);
-        ehFlex = false;
-        addCarro("Fusca", "VW", "GZA1234", 105.0, ehFlex, 50);        
+        addCarro("F50", "Ferrari", "GZA1234", 90.0, true, 240);
+        addCarro("Fusca", "VW", "GZA1234", 105.0, false, 50);        
         addCaminhao("Atego", "Mercedes", "GZB1111", 100.0, 10, 60);
         addCaminhao("Brutus", "Sacania", "GZB2222", 300.0, 35, 60);
         addOnibus("Apache", "Caio", "SIM9988", 0.0, 25, 40);

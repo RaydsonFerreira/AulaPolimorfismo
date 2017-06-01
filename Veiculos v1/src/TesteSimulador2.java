@@ -36,9 +36,8 @@ public class TesteSimulador2 {
     
     public static void main(String[] args){
         simulador = new Simulador();
-        boolean ehFlex = true;
         addMoto("CG", "Honda", "BOI1234", 155.0, 125, 80);
-        addCarro("Corolla", "Toyota", "EVA5463", 95.0, ehFlex, 90);
+        addCarro("Corolla", "Toyota", "EVA5463", 95.0, true, 90);
         addOnibus("Apache", "Caio", "SIM9988", 100.0, 40, 40);
         addMoto("Ninja", "Kawasaki", "BOA5151", 175.0, 300, 110);
                 
